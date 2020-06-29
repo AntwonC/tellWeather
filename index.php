@@ -1,6 +1,35 @@
 <?php 
 
+  // Web Scraping 
 
+  // Will be using simple_html_dom.php. (Download this by looking it up)
+  require_once 'simple_html_dom.php';
+  
+  // This line will let it know where to get the data from. By using a function called file_get_html(url).
+  $dom = file_get_html("https://www.imdb.com/title/tt4154756/");
+  /* We will use the find(information, 0) function to get to the div we need to. 
+     By typing in the div we want and the class, we can reach to it. */
+  $list = $dom->find('div[class="plot_summary"]', 0 ); 
+  // We will then get then create another array and find the element we want. A div, an a, an href, or any tag.   
+  $list_array = $list->find('div[class="summary_text"]', 0);
+  // Run a loop traversal through this array and then echo each element till we run out. 
+  // This will get the content of  the tag such as text or anything else. 
+ echo $list_array;
+
+ /* for ($i = 0; $i < sizeof($list_array); $i++)  {
+  echo $list_array[$i];
+} */
+
+ // foreach($dom->find('.plot_summary') as $postDiv )  {
+
+   // echo "<pre>";
+   // die(var_dump($postDiv));
+   // foreach($postDiv->find("div") as $div ) {
+      //echo "<pre>"; 
+    //  die(var_dump($div));
+    // for( $i = 0; $i )
+  //  } 
+ // }
 
 ?>
 
