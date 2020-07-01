@@ -4,10 +4,25 @@ body    {
       background-size: cover;
   }
   
-  .container  {
+  #input_container  {
       margin: 0 auto;
       max-width: 300px;
-      
+      position: relative;
+      top: 200px;
+  }
+  
+  #information_container  {
+      margin: 0 auto; 
+      max-width: 300px;
+      position: relative;
+      top: 200px;
+  }
+  
+  #header_container   {
+      margin: 0 auto; 
+      max-width: 300px; 
+      position: relative; 
+      top: 200px;
   }
   
   .label_above    {
@@ -23,5 +38,6 @@ body    {
   #place  {
       float: left;
   }
+  
   
   
